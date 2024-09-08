@@ -7,7 +7,6 @@ interface InputTextProps {
   icon?: any;
   label?: string;
   placeholder?: string;
-  
 }
 
 function InputText({icon, label, placeholder}: InputTextProps): JSX.Element {
