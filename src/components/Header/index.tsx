@@ -22,7 +22,7 @@ const Header = ({
         onPress={() => {
           navigation.goBack();
         }}>
-        <Image />
+        <Image source={require('../../../assets/icons/arrow_left_black.png')}/>
       </TouchableOpacity>
       <View>
         <Text style={[Gs.textCenter, Gs.h1, Gs.textBlack]}>{title}</Text>
