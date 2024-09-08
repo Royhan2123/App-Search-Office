@@ -1,10 +1,20 @@
 /* eslint-disable react/self-closing-comp */
-import {StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import { colors } from '../../../assets/style/Colors';
 import Header from '../../components/Header';
+import CardDetail from '../../components/CardDetail';
 
 const BookingScreen = () => {
+
+  const renderBookingDetail = () => {
+    return(
+      <View>
+        <Text>Your Space</Text>
+        <CardDetail/>
+      </View>
+    );
+  };
   return (
     <View style={style.container}>
       <Header
@@ -12,6 +22,13 @@ const BookingScreen = () => {
         subtitle="Space available for today"
         showRightButton
       />
+      <View>
+        <ScrollView>
+          {renderBookingDetail()}
+          {/* {renderBookingInformation()} */}
+        </ScrollView>
+        {/* {renderProceedPayment()} */}
+      </View>
     </View>
   );
 };
