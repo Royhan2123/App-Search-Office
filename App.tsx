@@ -15,6 +15,7 @@ import BookingScreen from './src/screen/booking';
 import Login from './src/screen/login_register';
 import Register from './src/screen/login_register/register';
 import SplashScreen from './src/splash';
+import Succes from './src/screen/Succes/succes';
 
 function App(): React.JSX.Element {
 
@@ -30,6 +31,7 @@ function App(): React.JSX.Element {
           <Stack.Screen name="Booking" component={BookingScreen} options={{headerShown: false}}/>
           <Stack.Screen name="Login" component={Login} options={{headerShown: false}}/>
           <Stack.Screen name="Register" component={Register} options={{headerShown: false}}/>
+          <Stack.Screen name="Succes" component={Succes} options={{headerShown: false}} />
         </Stack.Navigator>
       </NavigationContainer>
   );
