@@ -2,8 +2,12 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {Gs} from '../../../assets/style/GlobalStyle';
 import {colors} from '../../../assets/style/Colors';
+import { useNavigation } from '@react-navigation/native';
 
 const CardDetail = (): JSX.Element => {
+
+  const navigation = useNavigation();
+
   return (
     <View style={style.container}>
       <View style={style.leftContent}>
@@ -20,7 +24,9 @@ const CardDetail = (): JSX.Element => {
           </View>
         </View>
       </View>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => {
+        navigation.navigate('Detail');
+      }}>
         <Text style={[Gs.h4, Gs.textPrimary]}>Details</Text>
       </TouchableOpacity>
     </View>
