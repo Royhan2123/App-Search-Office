@@ -29,9 +29,7 @@ const SplashScreen = () => {
         alignItems: 'center',
       }}>
       <Image
-        source={{
-          uri: 'https://i.pinimg.com/564x/ef/70/6c/ef706c217eaa3ef49e67a104e404e76d.jpg',
-        }}
+        source={require('../../assets/images/splash.png')}
         style={{
           width: 200,
           height: 200,

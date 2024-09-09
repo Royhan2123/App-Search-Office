@@ -15,7 +15,11 @@ function InputText({icon, label, placeholder}: InputTextProps): JSX.Element {
       {label && <Text style={styles.label}>{label}</Text>}
       <View style={styles.searchContainer}>
         {icon && <Image source={icon} style={styles.iconContainer} />}
-        <TextInput placeholder={placeholder} style={styles.searchInput} />
+        <TextInput
+          placeholder={placeholder}
+          style={styles.searchInput}
+          placeholderTextColor={colors.black}
+        />
       </View>
     </>
   );
@@ -28,6 +32,7 @@ const styles = StyleSheet.create({
   },
   searchInput: {
     marginLeft: 10,
+    color: colors.black,
   },
   searchContainer: {
     ...Gs.flexRow,

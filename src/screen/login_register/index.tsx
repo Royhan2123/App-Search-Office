@@ -133,6 +133,7 @@ const style = StyleSheet.create({
     elevation: 1,
     padding: 10,
     marginBottom: 10,
+    color: colors.black,
   },
   texts: {
     ...Gs.textBlack,

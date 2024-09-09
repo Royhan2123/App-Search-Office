@@ -10,6 +10,7 @@ import {
   View,
 } from 'react-native';
 import {Gs} from '../../../../assets/style/GlobalStyle';
+import {colors} from '../../../../assets/style/Colors';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -64,14 +65,16 @@ const Register = () => {
           <TouchableOpacity
             style={style.button}
             onPress={() => {
-              navigation.dispatch((
+              navigation.dispatch(
                 CommonActions.reset({
                   index: 0,
-                  routes: [{
-                    name: 'Home',
-                  }],
-                })
-              ));
+                  routes: [
+                    {
+                      name: 'Home',
+                    },
+                  ],
+                }),
+              );
             }}>
             <Text
               style={{
@@ -138,6 +141,7 @@ const style = StyleSheet.create({
     elevation: 1,
     padding: 10,
     marginBottom: 10,
+    color: colors.black,
   },
   texts: {
     ...Gs.textBlack,
